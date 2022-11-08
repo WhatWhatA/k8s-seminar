@@ -8,5 +8,5 @@ spec:
     image: supergiantkir/animals:bear
   
   - name: container2
-    image: nginx:latest
+    image: yanivomc/spring-music:latest
   
