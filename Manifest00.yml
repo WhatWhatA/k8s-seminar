@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: Manifest-00
+  name: Manifest00
 spec:
   containers:
   - name: app1
@@ -18,7 +18,7 @@ spec:
   
   volumes:
   - name: app-storage
-    hostPath: 
+    hostPath:
       path: /tmp/files
 
   
