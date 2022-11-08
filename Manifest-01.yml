@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: manifest01
+spec:
+  containers:
+  - name: Container1
+    image: supergiantkir/animals:bear
+  
+  - name: Container2
+    image: nginx:latest
+  
+  
