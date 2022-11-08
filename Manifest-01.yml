@@ -4,10 +4,9 @@ metadata:
   name: manifest01
 spec:
   containers:
-  - name: Container1
+  - name: container1
     image: supergiantkir/animals:bear
   
-  - name: Container2
+  - name: container2
     image: nginx:latest
-  
   
