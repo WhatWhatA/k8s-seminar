@@ -6,7 +6,7 @@ metadata:
     k8sType: nodeSelectorExcise
 spec:
   replicas: 2
-  matchSelector:
+  selector:
     matchLabels:
       PodType: nodeSelectorExcise
   template:
