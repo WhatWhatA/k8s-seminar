@@ -29,9 +29,9 @@ spec:
             preference:
               matchExpressions:
               - key: topology.kubernetes.io/zone
-              operator: In
-              values:
-              - t2.medium
+                operator: In
+                values:
+                - t2.medium
       containers:
       - name: app1
         image: supergiantkir/animals:bear
