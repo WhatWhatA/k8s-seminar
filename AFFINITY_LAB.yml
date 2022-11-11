@@ -19,19 +19,19 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: topology.kubernetes.io/zone
+              - key: kubernetes.io/os
                 operator: In
                 values:
-                - us-east-1a
-                - us-east-1b
+                - linux
+                - windows
           preferredDuringSchedulingIgnoredDuringExecution:
           - weight: 1
             preference:
               matchExpressions:
-              - key: topology.kubernetes.io/zone
+              - key: kubernetes.io/hostname
                 operator: In
                 values:
-                - t2.medium
+                - kube
       containers:
       - name: app1
         image: supergiantkir/animals:bear
