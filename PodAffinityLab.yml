@@ -15,16 +15,6 @@ spec:
       labels:
         app: spring-music
     spec:
-      affinity:
-        podAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-              matchExpressions:
-              - key: cache
-                operator: In
-                values:
-                - redis
-          topologyKey: kubernetes.io/os
       containers:
       - name: spring-music
         image: yanivomc/spring-music:latest
@@ -53,7 +43,7 @@ spec:
           - key: kubernetes.io/os
             operator: In
             values:
-            - t2.medium
+              - t2.medium
   containers:
   - name: redis
     image: redis:latest
