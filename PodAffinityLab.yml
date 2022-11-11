@@ -57,12 +57,12 @@ spec:
             - windows
       preferredDuringScheduleIgnoredDuringExecution:
       - weight: 1
-      preference:
-        matchExpressions:
-          - key: kubernetes.io/os
-            operator: In
-            values:
-            - t2.medium
+        preference:
+        - matchExpressions:
+            - key: kubernetes.io/os
+              operator: In
+              values:
+              - t2.medium
   containers:
   - name: redis
   image: redis:latest
