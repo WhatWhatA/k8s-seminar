@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: spring-pod-affinity
@@ -15,6 +15,25 @@ spec:
       labels:
         app: spring-music
     spec:
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: cache
+                operator: In
+                values:
+                - redis
+          topologyKey: kubernetes.io/os
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - spring-music
+          topologyKey: kubernetes.io/os
       containers:
       - name: spring-music
         image: yanivomc/spring-music:latest
