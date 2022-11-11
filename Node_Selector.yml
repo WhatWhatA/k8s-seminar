@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: nodeSelectorExcise
+  name: node-selector-excise
   labels:
-    k8sType: nodeSelectorExcise
+    k8sType: node-selector-excise
 spec:
   replicas: 2
   selector:
     matchLabels:
-      PodType: nodeSelectorExcise
+      PodType: node-selector-excise
   template:
     metadata:
       labels:
-        PodType: nodeSelectorExcise
+        PodType: node-selector-excise
     spec:
       containers:
       - name: app1
