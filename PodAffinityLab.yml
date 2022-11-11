@@ -65,7 +65,7 @@ spec:
               - t2.medium
   containers:
   - name: redis
-  image: redis:latest
+    image: redis:latest
 
           
 
