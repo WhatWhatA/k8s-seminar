@@ -52,5 +52,3 @@ spec:
           hostPath:
             path: /tmp/files
             type: DirectoryOrCreate
-      nodeSelector:
-        env: prod
