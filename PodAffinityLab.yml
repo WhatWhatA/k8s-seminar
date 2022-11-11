@@ -17,7 +17,7 @@ spec:
     spec:
       affinity:
         podAffinity:
-          requiredDuringScheduleIgnoredDuringExecution:
+          requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
               matchExpressions:
               - key: cache
@@ -26,7 +26,7 @@ spec:
                 - redis
           topologyKey: kubernetes.io/os
         podAntiAffinity:
-          requiredDuringScheduleIgnoredDuringExecution:
+          requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
               matchExpressions:
               - key: app
@@ -47,7 +47,7 @@ metadata:
 spec:
   affinity:
     nodeAffinity:
-      requiredDuringScheduleIgnoredDuringExecution:
+      requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
           - key: kubernetes.io/os
@@ -55,7 +55,7 @@ spec:
             values:
             - linux
             - windows
-      preferredDuringScheduleIgnoredDuringExecution:
+      preferredDuringSchedulingIgnoredDuringExecution:
       - weight: 1
         preference:
         - matchExpressions:
