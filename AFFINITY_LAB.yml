@@ -25,13 +25,13 @@ spec:
               - us-east-1a
               - us-east-1b
           preferredDuringSchedulingIgnoredDuringExecution:
-            - weight: 1
-            preference:
-              matchExpressions:
-              - key: topology.kubernetes.io/zone
-              operator: In
-              values:
-              - t2.medium
+          - weight: 1
+          preference:
+            matchExpressions:
+            - key: topology.kubernetes.io/zone
+            operator: In
+            values:
+            - t2.medium
       containers:
       - name: app1
         image: supergiantkir/animals:bear
