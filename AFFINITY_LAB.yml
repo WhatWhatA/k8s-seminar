@@ -20,10 +20,10 @@ spec:
             nodeSelectorTerms:
             - matchExpressions:
               - key: topology.kubernetes.io/zone
-              operator: In
-              values:
-              - us-east-1a
-              - us-east-1b
+                operator: In
+                values:
+                - us-east-1a
+                - us-east-1b
           preferredDuringSchedulingIgnoredDuringExecution:
           - weight: 1
             preference:
