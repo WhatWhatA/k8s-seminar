@@ -24,7 +24,7 @@ spec:
                 operator: In
                 values:
                 - redis
-          topologyKey: kubernetes.io/os
+            topologyKey: kubernetes.io/os
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
@@ -33,7 +33,7 @@ spec:
                 operator: In
                 values:
                 - spring-music
-          topologyKey: kubernetes.io/os
+            topologyKey: kubernetes.io/os
       containers:
       - name: spring-music
         image: yanivomc/spring-music:latest
