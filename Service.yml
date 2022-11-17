@@ -45,7 +45,6 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: green
     app: blue
   ports: 
   - name: http-web 
