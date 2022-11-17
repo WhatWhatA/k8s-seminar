@@ -46,7 +46,6 @@ spec:
   type: LoadBalancer
   selector:
     app: blue
-    app: green
   ports: 
   - name: http-web 
     protocol: TCP
