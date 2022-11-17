@@ -45,7 +45,8 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: frontend
+    app: blue
+    app: green
   ports: 
   - name: http-web 
     protocol: TCP
