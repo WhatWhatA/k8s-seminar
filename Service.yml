@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment-test
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: yanivomc/spring-music:latest
+        ports:
+        - containerPort: 8080
+ ---
+ kind: Service      # Create new service
+apiVersion: v1     
+metadata:
+  name: my-service # Name of the service
+spec:
+  type: LoadBalancer
+  selector:
+    app: frontend
+  ports: 
+  - name: http-web 
+    protocol: TCP
+    port: 80
+    targetPort: 8080
