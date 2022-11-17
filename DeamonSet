@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: fluentd-elasticsearch
+spec:
+  template:
+    spec:
+      containers:
+      - name: alpine
+        image: alpine:latest imagei
+        args:
+        - sleep
+        - "1000"
